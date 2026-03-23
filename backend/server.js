@@ -32,9 +32,9 @@ app.post("/contact", async (req, res) => {
   try {
     const newMsg = new Contact(req.body);
     await newMsg.save();
-    res.send("Message saved successfully!");
+    res.send("Message sent successfully!");
   } catch (err) {
-    res.status(500).send("Error saving message");
+    res.status(500).send("Error sending message");
   }
 });
 
