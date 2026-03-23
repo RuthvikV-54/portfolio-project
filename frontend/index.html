@@ -449,9 +449,10 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
 
     const data = await res.text();
     alert(data);
+    document.querySelector("form").reset(); // ✅ added here
   } catch (err) {
     alert("Error sending message");
-  }
+  } 
 });
 </script>
 
