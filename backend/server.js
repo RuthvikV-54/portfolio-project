@@ -24,6 +24,10 @@ const Contact = mongoose.model("Contact", {
 });
 
 // Route
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
 app.post("/contact", async (req, res) => {
   try {
     const newMsg = new Contact(req.body);
